@@ -28,7 +28,7 @@ with dataset:
 	
 	# Loading the dataset
 	st.header('A preview of the dataset.')
-	df = pd.read_csv('/home/francis/Downloads/owid-covid-data.csv',parse_dates=['date'])
+	df = pd.read_csv('https://github.com/franciskingk/Covid19-data-analysis-for-Kenya/blob/main/owid-covid-data.csv',parse_dates=['date'])
 	df.drop(['new_cases_smoothed','iso_code','icu_patients_per_million',], axis=1, inplace=True)
 	Kenya = df[df['location'] == 'Kenya']
 	preview=Kenya.tail()
