@@ -55,8 +55,8 @@ with visuals:
 	fig, ax = plt.subplots()
 	sns.set_style("darkgrid")
 	sns.lineplot(x='date',y='new_cases',data= Kenya,hue='location').set(title="Trend on new Covid19 cases upto 24th March 2022")
-
-	st.plotly_chart(fig)
+	plt.show()
+	st.pyplot(fig)
 
 	# plotting to see the trend of people who stayed long in the hospital and whether they were alive or dead at the end
 
@@ -64,7 +64,8 @@ with visuals:
 	fig, ax = plt.subplots()
 	sns.set_style("darkgrid")
 	sns.lineplot(x='date',y='new_deaths',hue='location',data=Kenya).set(title="Trend on deaths due to Covid19 up to the 24th of March 2022")
-	st.plotly_chart(fig)
+	plt.show()
+	st.pyplot(fig)
 
 	# plotting to see the type of surgery that makes people stay for long in hospital
 
@@ -73,23 +74,27 @@ with visuals:
 	fig, ax = plt.subplots()
 	sns.set_style("darkgrid")
 	sns.lineplot(x='date',y='new_tests',hue='location',data=Kenya).set(title="Trend on Testing_rate for Covid19 up to the 24th of March 2022")
-	st.plotly_chart(fig)
+	plt.show()
+	st.pyplot(fig)
 
 	st.header('Trend on Positive rate for Covid19 up to the 24th of March 2022')
 	# plotting for the testing rate
 	fig, ax = plt.subplots()
 	sns.set_style("darkgrid")
 	sns.lineplot(x='date',y='positive_rate',hue='location',data=Kenya).set(title="Trend on Positive rate for Covid19 up to the 24th of March 2022")
-	st.plotly_chart(fig)
+	plt.show()
+	st.pyplot(fig)
 
 	st.header('Trend on new vaccinations against Covid19 up to the 24th of March 2022')
 	# plotting for the testing rate
 	fig, ax = plt.subplots()
 	sns.set_style("darkgrid")
 	sns.lineplot(x='date',y='new_vaccinations',hue='location',data=Kenya).set(title="Trend on new vaccinations against Covid19 up to the 24th of March 2022")
-	st.plotly_chart(fig)
+	plt.show()
+	st.pyplot(fig)
 
 	st.header('Timeline of People vaccinated vs those fully Vaccinated in Kenya upto 24th March 2022')
 	# plotting the people vaccinated vs people fully vaccinated
 	Kenya[['people_fully_vaccinated','people_vaccinated']].plot(figsize=(15,8),title='Timeline of People vaccinated vs those fully Vaccinated in Kenya upto 24th March 2022')
-	st.plotly_chart(fig)
+	plt.show()
+	st.pyplot(fig)
